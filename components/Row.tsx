@@ -26,6 +26,11 @@ function Row({ title, movies }: Props) {
           : scrollLeft + clientWidth
 
       rowRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' })
+      
+      // Check if scrolled to begining and hide the ChevronLeftIcon
+      if (scrollTo <= 0) {
+        setIsMoved(false)
+      }
     }
   }
 
