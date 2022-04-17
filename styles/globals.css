@@ -30,4 +30,42 @@
   .modalButton {
     @apply flex h-11 w-11 items-center justify-center rounded-full border-2 border-[gray] bg-[#2a2a2a]/60 transition hover:border-white hover:bg-white/10;
   }
+
+  .planBox {
+    @apply relative mx-1.5 flex h-20 w-[calc(100%/3)] cursor-default items-center justify-center rounded-sm bg-[#e50914] font-semibold shadow after:absolute after:top-full after:left-1/2 after:block after:-translate-x-1/2 after:border-8 after:border-b-0 after:border-transparent after:border-t-[#e50914] after:content-[""] md:h-32 lg:mx-8;
+  }
+
+  /* Table */
+  .tableRow {
+    @apply flex flex-wrap items-center font-medium;
+  }
+
+  .tableDataTitle {
+    @apply w-full p-2.5 text-center text-sm font-normal text-white md:w-2/5 md:p-3.5 md:text-left md:text-base;
+  }
+
+  .tableDataFeature {
+    @apply w-[calc(100%/3)] p-2.5 text-center md:w-[calc(60%/3)] md:p-3.5;
+  }
+
+  .membershipLink {
+    @apply cursor-pointer text-blue-500 hover:underline;
+  }
+
+  /* MUI Menu */
+  .menu {
+    @apply md:hidden;
+  }
+
+  .menu .MuiPaper-root {
+    @apply !absolute !left-0 !rounded-none !border !border-[gray] !bg-black !text-white;
+  }
+
+  .menu .MuiList-root {
+    @apply !p-0;
+  }
+
+  .menu .MuiMenuItem-root {
+    @apply !block !w-72 !py-3.5 !text-center !text-sm !font-light !text-[#b3b3b3] !transition !duration-200 first:cursor-default first:!font-normal first:!text-white hover:!bg-[#11100F];
+  }
 }
